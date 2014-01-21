@@ -1,0 +1,8 @@
+- tests
+- edit in place
+- smart formatting
+- rules as command line arguments
+- rules as plugins
+- conditionals
+- templates
+- pure JS XML parser (to avoid compiling native code)

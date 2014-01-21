@@ -1,0 +1,7 @@
+<rules>
+  <remove selector="p.remove-me" />
+  <append selector="p.give-me-children">
+    <span>Second</span>
+    <span>Third</span>
+  </append>
+</rules>

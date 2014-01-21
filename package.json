@@ -1,0 +1,25 @@
+{
+  "name": "html-patch",
+  "version": "0.0.1",
+  "description": "Patch html files with DOM-oriented rules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/floriancargoet/html-patch.git"
+  },
+  "keywords": [
+    "html",
+    "dom",
+    "patch"
+  ],
+  "author": "Florian Cargoët",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floriancargoet/html-patch/issues"
+  },
+  "homepage": "https://github.com/floriancargoet/html-patch",
+  "dependencies": {
+    "jsdom": "~0.8.11",
+    "libxmljs": "~0.8.1"
+  }
+}
