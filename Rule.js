@@ -2,7 +2,6 @@ var Rule = module.exports = function Rule(command, selector, body) {
   this.command = command;
   this.selector = selector;
   this.body = body;
-  console.log(this)
 };
 
 Rule.fromXml = function fromXml(node) {
@@ -25,8 +24,8 @@ Rule.prototype.remove = function remove(node, document) {
 Rule.prototype.append = function append(node, document) {
   var container = document.createElement('div');
   container.innerHTML = this.body;
-  var children = container.childNodes
-  while(children.length) {
+  var children = container.childNodes;
+  while (children.length) {
     node.appendChild(children[0]);
   }
 };

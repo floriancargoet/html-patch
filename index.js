@@ -1,14 +1,22 @@
-var fs = require('fs');
-var jsdom = require('jsdom');
-var xml = require('libxmljs');
+var fs       = require('fs');
+var jsdom    = require('jsdom');
+var xml      = require('libxmljs');
+var optimist = require('optimist');
 
 var Rule = require('./Rule');
 
-var inputFile = fs.readFileSync('examples/simple-rules.html', 'utf8');
-var rulesFile = fs.readFileSync('examples/simple-rules.xml', 'utf8');
+var argv = optimist
+  .string('input')
+  .string('rules')
+  .argv;
+
+var inputFile = fs.readFileSync(argv.input, 'utf8');
+var rulesFile = fs.readFileSync(argv.rules, 'utf8');
 
 var rules = xml.parseXml(rulesFile).find('/rules/*').map(Rule.fromXml);
 
+console.log('Before');
+console.log('------');
 console.log(inputFile);
 
 jsdom.env(inputFile, function (errors, window) {
@@ -16,6 +24,8 @@ jsdom.env(inputFile, function (errors, window) {
     rule.apply(window.document);
   });
   var html = toHTML(window.document);
+  console.log('After');
+  console.log('-----');
   console.log(html);
 });
 
@@ -28,3 +38,4 @@ function toHTML(doc) {
   html += doc.innerHTML;
   return html;
 }
+
