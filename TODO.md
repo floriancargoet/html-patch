@@ -5,4 +5,5 @@
 - rules as plugins
 - conditionals
 - templates
-- pure JS XML parser (to avoid compiling native code)
+- allow HTML in rules file (unclosed tags are not allowed in XML)
+- pure JS parsers (to avoid compiling native code)
