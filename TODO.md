@@ -1,9 +1,10 @@
-- tests
+- tests, code coverage
 - edit in place
+- guess rules file (same name + .xml)
 - smart formatting
-- rules as command line arguments
+- rules as command line arguments (--remove 'div > p' --append 'body' '<footer>...</footer>')
 - rules as plugins
-- conditionals
-- templates
+- conditionals (<if selector="head > style:last-child"><append>...)
+- templates?
 - allow HTML in rules file (unclosed tags are not allowed in XML)
 - pure JS parsers (to avoid compiling native code)

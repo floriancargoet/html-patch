@@ -4,10 +4,6 @@ var Rule = module.exports = function Rule(command, selector, body) {
   this.body = body;
 };
 
-Rule.fromXml = function fromXml(node) {
-  return new Rule(node.name(), node.attr('selector').value(), node.childNodes().map(String).join(''));
-};
-
 Rule.prototype.apply = function apply(document) {
   var self = this;
   if (this.command in this) {
