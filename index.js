@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs       = require('fs');
 var jsdom    = require('jsdom');
 var xml      = require('libxmljs');
