@@ -1,5 +1,6 @@
 html-patch
 ==========
+**Work in progress**
 
 Patches HTML files with DOM-oriented rules.
 
